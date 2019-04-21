@@ -40,7 +40,7 @@ while rock_scissor != "piedra" and rock_scissor != "papel" and rock_scissor != "
 #eleccion_tuya =
 eleccion_rival = (randint(1,3))
 
-
+#klajsdkaskjdlaskjldkjlasdjklasd
 
 
 #while pikachu_hp > 0 and chosen_pkmn_hp > 0
