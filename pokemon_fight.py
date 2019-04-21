@@ -37,10 +37,10 @@ while rock_scissor != "piedra" and rock_scissor != "papel" and rock_scissor != "
     print("Te has equivocado al escribir tu eleccion, vuelve a hacerlo")
     rock_scissor = input("Piedra, papel o tijeras?\n").lower()
 
-eleccion_tuya =
+#eleccion_tuya =
 eleccion_rival = (randint(1,3))
 
 
 
 
-while pikachu_hp > 0 and chosen_pkmn_hp > 0
+#while pikachu_hp > 0 and chosen_pkmn_hp > 0
