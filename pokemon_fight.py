@@ -1,4 +1,5 @@
 from random import randint
+
 chosen_pkmn = input("¿Contra que pokemon quieres luchar? Squirtle, Charmander o Bulbasaur\n").lower()
 chosen_pkmn_hp = 0
 chosen_pkmn_dmg = 0
@@ -31,15 +32,76 @@ print("     Vida de pikachu: " + str(pikachu_hp))
 print("     Daño de impact trueno: " + str(impact_dmg))
 print("     Daño de bola voltio: " + str(voltio_dmg) + "\n")
 
-print("Vamos a decidir con piedra, papel o tijeras:")
-rock_scissor = input("Escribeme tu eleccion").lower()
-while rock_scissor != "piedra" and rock_scissor != "papel" and rock_scissor != "tijeras":
-    print("Te has equivocado al escribir tu eleccion, vuelve a hacerlo")
-    rock_scissor = input("Piedra, papel o tijeras?\n").lower()
+while pikachu_hp > 0 and chosen_pkmn_hp > 0:
+    chosen_attack = input("¿Que ataque quieres realizar, 1 para Impact Trueno, 2 para Bola Voltio?\n")
 
-#eleccion_tuya =
-eleccion_rival = (randint(1,3))
+    while chosen_attack != "1" and chosen_attack != "2":
+        chosen_attack = input("Te has equivocado al elegir el ataque, pulsa 1 para Impact Trueno o 2 para Bola Voltio\n")
 
+    if chosen_attack == "1":
 
+        critical = randint(1, 10)
 
-#while pikachu_hp > 0 and chosen_pkmn_hp > 0
+        if critical == 1:
+            chosen_pkmn_hp -= (impact_dmg * 2)
+            print('El golpe ha sido critico!!')
+
+            if chosen_pkmn_hp <= 0:
+                print("El rival ha sido debilitado")
+            else:
+                print("La vida del rival es " + str(chosen_pkmn_hp))
+
+        else:
+            chosen_pkmn_hp -= impact_dmg
+
+            if chosen_pkmn_hp <= 0:
+                print("El rival ha sido debilitado")
+            else:
+                print("La vida del rival es " + str(chosen_pkmn_hp))
+
+    if chosen_attack == "2":
+
+        critical = randint(1, 10)
+
+        if critical == 1:
+            chosen_pkmn_hp -= (voltio_dmg * 2)
+            print("El golpe ha sido critico!!")
+
+            if chosen_pkmn_hp <= 0:
+                print("El rival ha sido debilitado")
+            else:
+                print("La vida del rival es " + str(chosen_pkmn_hp))
+
+        else:
+            chosen_pkmn_hp -= voltio_dmg
+
+            if chosen_pkmn_hp <= 0:
+                print("El rival ha sido debilitado")
+            else:
+                print("La vida del rival es " + str(chosen_pkmn_hp))
+
+    print("El rival va a atacar...")
+
+    critical = randint(1, 10)
+
+    if critical == 1 or critical == 2:
+        print("El rival te ha hecho un golpe critico!")
+        pikachu_hp -= chosen_pkmn_dmg * 2
+
+        if pikachu_hp <= 0:
+            print("Tu Pikachu ha sido debilitado")
+        else:
+            print("La vida de Pikachu es " + str(pikachu_hp))
+
+    else:
+        pikachu_hp -= chosen_pkmn_dmg
+
+        if pikachu_hp <= 0:
+            print("Tu Pikachu ha sido debilitado")
+        else:
+            print("La vida de Pikachu es " + str(pikachu_hp))
+
+if pikachu_hp <= 0:
+    print("Has perdido el combate!")
+else:
+    print("Has ganado el combate!")
