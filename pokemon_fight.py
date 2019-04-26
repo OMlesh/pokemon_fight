@@ -14,14 +14,17 @@ while chosen_pkmn != "Squirtle" and chosen_pkmn != "Charmander" and chosen_pkmn 
 if chosen_pkmn == "Squirtle":
     chosen_pkmn_hp = 90
     chosen_pkmn_dmg = 8
+    chosen_pkmn_attack = "Pistola Agua"
     print("Tu rival es Squirtle\n")
 elif chosen_pkmn == "Charmander":
     chosen_pkmn_hp = 80
     chosen_pkmn_dmg = 7
+    chosen_pkmn_attack = "Ascuas"
     print("Tu rival es Charmander\n")
 else:
     chosen_pkmn_hp = 100
     chosen_pkmn_dmg = 10
+    chosen_pkmn_attack = "Látigo Cepa"
     print("Tu rival es Bulbasaur\n")
 
 print("Estas son sus estadisticas")
@@ -80,12 +83,13 @@ while pikachu_hp > 0 and chosen_pkmn_hp > 0:
             else:
                 print(f"La vida del {chosen_pkmn} es {chosen_pkmn_hp}")
 
-    print("El rival va a atacar...")
+    print(f"El rival va a atacar con {chosen_pkmn_attack}")
 
     critical = randint(1, 10)
 
     if critical == 1 or critical == 2:
-        print("El rival te ha hecho un golpe critico!")
+        print(f"El {chosen_pkmn_attack} del rival ha sido un golpe critico!")
+        print(f"{chosen_pkmn_attack} ha hecho {chosen_pkmn_dmg * 2} de daño")
         pikachu_hp -= chosen_pkmn_dmg * 2
 
         if pikachu_hp <= 0:
@@ -94,6 +98,7 @@ while pikachu_hp > 0 and chosen_pkmn_hp > 0:
             print(f"La vida de Pikachu es: {pikachu_hp}")
 
     else:
+        print(f"El {chosen_pkmn_attack} ha hecho {chosen_pkmn_dmg} de daño")
         pikachu_hp -= chosen_pkmn_dmg
 
         if pikachu_hp <= 0:
