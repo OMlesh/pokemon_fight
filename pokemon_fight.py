@@ -15,21 +15,21 @@ if chosen_pkmn == "Squirtle":
     chosen_pkmn_hp = 90
     chosen_pkmn_dmg = 8
     chosen_pkmn_attack = "Pistola Agua"
-    print("Tu rival es Squirtle\n")
+    print(f"Tu rival es {chosen_pkmn}\n")
 elif chosen_pkmn == "Charmander":
     chosen_pkmn_hp = 80
     chosen_pkmn_dmg = 7
     chosen_pkmn_attack = "Ascuas"
-    print("Tu rival es Charmander\n")
+    print(f"Tu rival es {chosen_pkmn}\n")
 else:
     chosen_pkmn_hp = 100
     chosen_pkmn_dmg = 10
     chosen_pkmn_attack = "Látigo Cepa"
-    print("Tu rival es Bulbasaur\n")
+    print(f"Tu rival es {chosen_pkmn}\n")
 
 print("Estas son sus estadisticas")
-print(f"     Vida de {chosen_pkmn} : {chosen_pkmn_hp}")
-print(f"     Daño de {chosen_pkmn} : {chosen_pkmn_dmg}\n")
+print(f"     Vida de {chosen_pkmn}: {chosen_pkmn_hp}")
+print(f"     Daño de {chosen_pkmn_attack}: {chosen_pkmn_dmg}\n")
 print("Y estos son las estadisticas de tu pikachu")
 print(f"     Vida de Pikachu: {pikachu_hp}")
 print(f"     Daño de Impact Trueno: {impact_dmg}")
