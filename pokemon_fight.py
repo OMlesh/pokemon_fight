@@ -1,21 +1,21 @@
 from random import randint
 
-chosen_pkmn = input("¿Contra que pokemon quieres luchar? Squirtle, Charmander o Bulbasaur\n").lower()
+chosen_pkmn = input("¿Contra que pokemon quieres luchar? Squirtle, Charmander o Bulbasaur\n").capitalize()
 chosen_pkmn_hp = 0
 chosen_pkmn_dmg = 0
 pikachu_hp = 100
 impact_dmg = 10
 voltio_dmg = 12
 
-while chosen_pkmn != "squirtle" and chosen_pkmn != "charmander" and chosen_pkmn != "bulbasaur":
+while chosen_pkmn != "Squirtle" and chosen_pkmn != "Charmander" and chosen_pkmn != "Bulbasaur":
     print("Te has equivocado al escribir el nombre, vuelve a escribir el nombre del rival\n")
-    chosen_pkmn = input("Squirtle, Charmander o Bulbasaur?\n").lower()
+    chosen_pkmn = input("Squirtle, Charmander o Bulbasaur?\n").capitalize()
 
-if chosen_pkmn == "squirtle":
+if chosen_pkmn == "Squirtle":
     chosen_pkmn_hp = 90
     chosen_pkmn_dmg = 8
     print("Tu rival es Squirtle\n")
-elif chosen_pkmn == "charmander":
+elif chosen_pkmn == "Charmander":
     chosen_pkmn_hp = 80
     chosen_pkmn_dmg = 7
     print("Tu rival es Charmander\n")
@@ -28,9 +28,9 @@ print("Estas son sus estadisticas")
 print(f"     Vida de {chosen_pkmn} : {chosen_pkmn_hp}")
 print(f"     Daño de {chosen_pkmn} : {chosen_pkmn_dmg}\n")
 print("Y estos son las estadisticas de tu pikachu")
-print(f"     Vida de pikachu: {pikachu_hp}")
-print(f"     Daño de impact trueno: {impact_dmg}")
-print(f"     Daño de bola voltio: {voltio_dmg}\n")
+print(f"     Vida de Pikachu: {pikachu_hp}")
+print(f"     Daño de Impact Trueno: {impact_dmg}")
+print(f"     Daño de Bola Voltio: {voltio_dmg}\n")
 
 while pikachu_hp > 0 and chosen_pkmn_hp > 0:
     chosen_attack = input("¿Que ataque quieres realizar, 1 para Impact Trueno, 2 para Bola Voltio?\n")
