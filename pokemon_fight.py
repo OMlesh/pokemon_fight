@@ -25,12 +25,12 @@ else:
     print("Tu rival es Bulbasaur\n")
 
 print("Estas son sus estadisticas")
-print("     Vida de " + str(chosen_pkmn) + ": " + str(chosen_pkmn_hp))
-print("     Daño de " + str(chosen_pkmn) + ": " + str(chosen_pkmn_dmg) + "\n")
+print(f"     Vida de {chosen_pkmn} : {chosen_pkmn_hp}")
+print(f"     Daño de {chosen_pkmn} : {chosen_pkmn_dmg}\n")
 print("Y estos son las estadisticas de tu pikachu")
-print("     Vida de pikachu: " + str(pikachu_hp))
-print("     Daño de impact trueno: " + str(impact_dmg))
-print("     Daño de bola voltio: " + str(voltio_dmg) + "\n")
+print(f"     Vida de pikachu: {pikachu_hp}")
+print(f"     Daño de impact trueno: {impact_dmg}")
+print(f"     Daño de bola voltio: {voltio_dmg}\n")
 
 while pikachu_hp > 0 and chosen_pkmn_hp > 0:
     chosen_attack = input("¿Que ataque quieres realizar, 1 para Impact Trueno, 2 para Bola Voltio?\n")
@@ -49,7 +49,7 @@ while pikachu_hp > 0 and chosen_pkmn_hp > 0:
             if chosen_pkmn_hp <= 0:
                 print("El rival ha sido debilitado")
             else:
-                print("La vida del rival es " + str(chosen_pkmn_hp))
+                print(f"La vida del {chosen_pkmn} es {chosen_pkmn_hp}")
 
         else:
             chosen_pkmn_hp -= impact_dmg
@@ -57,7 +57,7 @@ while pikachu_hp > 0 and chosen_pkmn_hp > 0:
             if chosen_pkmn_hp <= 0:
                 print("El rival ha sido debilitado")
             else:
-                print("La vida del rival es " + str(chosen_pkmn_hp))
+                print(f"La vida del {chosen_pkmn} es {chosen_pkmn_hp}")
 
     if chosen_attack == "2":
 
@@ -70,7 +70,7 @@ while pikachu_hp > 0 and chosen_pkmn_hp > 0:
             if chosen_pkmn_hp <= 0:
                 print("El rival ha sido debilitado")
             else:
-                print("La vida del rival es " + str(chosen_pkmn_hp))
+                print(f"La vida del {chosen_pkmn} es {chosen_pkmn_hp}")
 
         else:
             chosen_pkmn_hp -= voltio_dmg
@@ -78,7 +78,7 @@ while pikachu_hp > 0 and chosen_pkmn_hp > 0:
             if chosen_pkmn_hp <= 0:
                 print("El rival ha sido debilitado")
             else:
-                print("La vida del rival es " + str(chosen_pkmn_hp))
+                print(f"La vida del {chosen_pkmn} es {chosen_pkmn_hp}")
 
     print("El rival va a atacar...")
 
@@ -91,7 +91,7 @@ while pikachu_hp > 0 and chosen_pkmn_hp > 0:
         if pikachu_hp <= 0:
             print("Tu Pikachu ha sido debilitado")
         else:
-            print("La vida de Pikachu es " + str(pikachu_hp))
+            print(f"La vida de Pikachu es: {pikachu_hp}")
 
     else:
         pikachu_hp -= chosen_pkmn_dmg
@@ -99,7 +99,7 @@ while pikachu_hp > 0 and chosen_pkmn_hp > 0:
         if pikachu_hp <= 0:
             print("Tu Pikachu ha sido debilitado")
         else:
-            print("La vida de Pikachu es " + str(pikachu_hp))
+            print(f"La vida de Pikachu es: {pikachu_hp}")
 
 if pikachu_hp <= 0:
     print("Has perdido el combate!")
